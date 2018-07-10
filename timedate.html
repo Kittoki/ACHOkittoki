@@ -19,7 +19,7 @@ if(nsec<=9) nsec="0"+nsec;
 
 document.getElementById('daybox').innerHTML=""+tday[nday]+"";
 document.getElementById('datebox').innerHTML=""+ndate+"/"+tmonth[nmonth]+"/"+nyear+"";
-document.getElementById('timebox').innerHTML=""+nhour+":"+nmin+"";
+document.getElementById('timebox').innerHTML=""+nhour+":"+nmin+""+ap+"";
 }
 
 window.onload=function(){
@@ -27,8 +27,8 @@ GetClock();
 setInterval(GetClock,1000);
 }
 </script>
-<center><div id="timebox" style="font:64pt Calibri; color:#ffffff; background-color: transparent; "></div></center></b>
-<center><div id="datebox" style="font:48pt Calibri; color:#ffffff; background-color: transparent; "></div></center></b>
-<center><div id="daybox" style="font:54pt Calibri; color:#ffffff; background-color: transparent; "></div></center>
+<center><div id="timebox" style="font:64pt Calibri; color:#ffffff; background-color: #000000; line-height: 0.8;"></div></center></b>
+<center><div id="datebox" style="font:48pt Calibri; color:#ffffff; background-color: #000000; line-height: 0.8;"></div></center></b>
+<center><div id="daybox" style="font:54pt Calibri; color:#ffffff; background-color: #000000; line-height: 0.8;"></div></center></b>
 </body>
 </html>
