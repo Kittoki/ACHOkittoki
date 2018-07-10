@@ -2,7 +2,7 @@
 <head>
 <script type="text/javascript">
 tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
-tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+tmonth=new Array("1","2","3","4","5","6","7","8","9","10","11","12");
 
 function GetClock(){
 var d=new Date();
@@ -17,7 +17,9 @@ else if(nhour>12){ap=" PM";nhour-=12;}
 if(nmin<=9) nmin="0"+nmin;
 if(nsec<=9) nsec="0"+nsec;
 
-document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
+document.getElementById('daybox').innerHTML=""+tday[nday]+"";
+document.getElementById('datebox').innerHTML=""+ndate+"/"+tmonth[nmonth]+"/"+nyear+"";
+document.getElementById('timebox').innerHTML=""+nhour+":"+nmin+"";
 }
 
 window.onload=function(){
@@ -25,7 +27,8 @@ GetClock();
 setInterval(GetClock,1000);
 }
 </script>
-<center><div id="clockbox" style="font:64pt Calibri; color:#ffffff; background-color: transparent; "></div></center>
-
+<center><div id="timebox" style="font:64pt Calibri; color:#ffffff; background-color: transparent; "></div></center></b>
+<center><div id="datebox" style="font:48pt Calibri; color:#ffffff; background-color: transparent; "></div></center></b>
+<center><div id="daybox" style="font:54pt Calibri; color:#ffffff; background-color: transparent; "></div></center>
 </body>
 </html>
